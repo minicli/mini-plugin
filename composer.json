@@ -1,5 +1,5 @@
 {
-  "name": "minicli/miniplugin",
+  "name": "minicli/mini-plugin",
   "description": "The Minicli plugin API",
   "license": "MIT",
   "type": "composer-plugin",
