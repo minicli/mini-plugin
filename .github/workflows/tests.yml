@@ -54,5 +54,8 @@ jobs:
       - name: "Validate Composer dependencies"
         run: "composer validate"
 
+      - name: "Check Static Analysis"
+        run: "composer stan"
+
       - name: "Run Test suite"
         run: "composer test"

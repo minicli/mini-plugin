@@ -4,11 +4,23 @@
   "license": "MIT",
   "type": "composer-plugin",
   "require": {
-    "php": "^8.1"
+    "php": "^8.1",
+    "composer-plugin-api": "*"
+  },
+  "require-dev": {
+    "composer/composer": "^2.5",
+    "minicli/minicli": "^4.0",
+    "pestphp/pest": "^2.6",
+    "phpstan/phpstan": "^1.10"
   },
   "autoload": {
     "psr-4": {
       "Minicli\\Plugin\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Minicli\\Plugin\\Tests\\": "tests/"
     }
   },
   "scripts": {
@@ -27,6 +39,9 @@
     "stan": "Run PHPStan against code base.",
     "test": "Run test suite."
   },
+  "extra": {
+    "class": "Minicli\\Plugin\\PluginManager"
+  },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "config": {
@@ -36,8 +51,5 @@
     "allow-plugins": {
       "pestphp/pest-plugin": true
     }
-  },
-  "require-dev": {
-    "pestphp/pest": "^2.6"
   }
 }
