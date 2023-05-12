@@ -74,7 +74,7 @@ final class PluginLoader
             }
 
             usort($pluginClasses, function (string $pluginA, string $pluginB) {
-                $isOfficialPlugin = fn (string $plugin) => str_starts_with($plugin, 'Minicli\\Plugins\\');
+                $isOfficialPlugin = fn (string $plugin) => str_starts_with($plugin, 'Minicli\\Framework\\Plugins\\');
 
                 return match (true) {
                     $isOfficialPlugin($pluginA) && $isOfficialPlugin($pluginB),
