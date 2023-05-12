@@ -24,7 +24,7 @@ final class PluginLoader
     /**
      * @param string $interface the interface for the hook to execute
      * @return array<int, object> list of plugins
-     * @throws BindingResolutionException|ReflectionException
+     * @throws BindingResolutionException|ReflectionException|Throwable
      */
     public static function getPlugins(string $interface): array
     {
@@ -49,7 +49,7 @@ final class PluginLoader
 
     /**
      * @return array<int, object>
-     * @throws BindingResolutionException|ReflectionException
+     * @throws BindingResolutionException|ReflectionException|Throwable
      */
     private static function getPluginInstances(): array
     {
